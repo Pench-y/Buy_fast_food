@@ -42,41 +42,45 @@ public class Comprar extends javax.swing.JFrame {
     private void initComponents() {
 
         btretorno = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         btpagar = new javax.swing.JButton();
         cboProducto = new javax.swing.JComboBox();
         spnCantidad = new javax.swing.JSpinner();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblProductos = new javax.swing.JTable();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        labeltotal = new javax.swing.JLabel();
+        labelIva = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        labelSubtotal = new javax.swing.JLabel();
         lblSubtotal = new javax.swing.JLabel();
         lblIva = new javax.swing.JLabel();
         lblTotal = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        background = new javax.swing.JPanel();
+        lbltitle = new javax.swing.JLabel();
+        bannerright = new javax.swing.JLabel();
+        bannerleft = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btretorno.setText("Return");
+        btretorno.setBackground(new java.awt.Color(255, 255, 51));
+        btretorno.setText("Retornar");
         btretorno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btretornoActionPerformed(evt);
             }
         });
+        getContentPane().add(btretorno, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 280, 80, -1));
 
-        jLabel1.setFont(new java.awt.Font("Bauhaus 93", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 153, 153));
-        jLabel1.setText("Comidas Rapidas");
-
+        btpagar.setBackground(new java.awt.Color(255, 255, 51));
         btpagar.setText("Pagar");
         btpagar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btpagarActionPerformed(evt);
             }
         });
+        getContentPane().add(btpagar, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 320, 80, -1));
 
         cboProducto.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cboProducto.addActionListener(new java.awt.event.ActionListener() {
@@ -84,6 +88,7 @@ public class Comprar extends javax.swing.JFrame {
                 cboProductoActionPerformed(evt);
             }
         });
+        getContentPane().add(cboProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, -1, -1));
 
         spnCantidad.setModel(new javax.swing.SpinnerNumberModel(1, 1, 10, 1));
         spnCantidad.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -91,6 +96,7 @@ public class Comprar extends javax.swing.JFrame {
                 spnCantidadStateChanged(evt);
             }
         });
+        getContentPane().add(spnCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, -1, -1));
 
         tblProductos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -105,119 +111,69 @@ public class Comprar extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tblProductos);
 
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 420, 83));
+
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel6.setText("Producto");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel7.setText("Total:");
+        labeltotal.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        labeltotal.setText("Total:");
+        getContentPane().add(labeltotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 330, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel8.setText("Iva:");
+        labelIva.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        labelIva.setText("Iva:");
+        getContentPane().add(labelIva, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 300, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel9.setText("Cantidad");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, -1, -1));
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel10.setText("Subtotal:");
+        labelSubtotal.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        labelSubtotal.setText("Subtotal:");
+        getContentPane().add(labelSubtotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, -1, -1));
 
         lblSubtotal.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        lblSubtotal.setForeground(new java.awt.Color(255, 153, 153));
         lblSubtotal.setText("Producto");
+        getContentPane().add(lblSubtotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 270, -1, -1));
 
         lblIva.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        lblIva.setForeground(new java.awt.Color(255, 153, 153));
         lblIva.setText("Producto");
+        getContentPane().add(lblIva, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 300, -1, -1));
 
         lblTotal.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        lblTotal.setForeground(new java.awt.Color(255, 153, 153));
         lblTotal.setText("Producto");
+        getContentPane().add(lblTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 330, -1, -1));
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 51));
         jButton1.setText("Agregar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, -1, 57));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btretorno)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btpagar)
-                        .addGap(41, 41, 41))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel9))
-                                .addGap(22, 22, 22)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(cboProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(spnCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jButton1))))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 407, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(38, Short.MAX_VALUE))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel7))
-                        .addGap(47, 47, 47)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblIva)
-                            .addComponent(lblTotal)
-                            .addComponent(lblSubtotal))))
-                .addGap(128, 128, 128))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jLabel1)
-                .addGap(15, 15, 15)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cboProducto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(spnCantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(2, 2, 2)))
-                .addGap(49, 49, 49)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(lblSubtotal))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(lblIva))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(lblTotal))
-                .addGap(25, 25, 25)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btpagar)
-                    .addComponent(btretorno))
-                .addGap(51, 51, 51))
-        );
+        background.setBackground(new java.awt.Color(255, 245, 101));
+        background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lbltitle.setFont(new java.awt.Font("Bauhaus 93", 0, 24)); // NOI18N
+        lbltitle.setForeground(new java.awt.Color(255, 153, 153));
+        lbltitle.setText("Comidas Rapidas");
+        background.add(lbltitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
+
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 540, 70));
+
+        bannerright.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/banner.png"))); // NOI18N
+        bannerright.setText("jLabel1");
+        getContentPane().add(bannerright, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 0, 90, 360));
+
+        bannerleft.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/banner.png"))); // NOI18N
+        bannerleft.setText("jLabel1");
+        getContentPane().add(bannerleft, new org.netbeans.lib.awtextra.AbsoluteConstraints(-210, 0, 290, 360));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -325,20 +281,23 @@ public class Comprar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel background;
+    private javax.swing.JLabel bannerleft;
+    private javax.swing.JLabel bannerright;
     private javax.swing.JButton btpagar;
     private javax.swing.JButton btretorno;
     private javax.swing.JComboBox cboProducto;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel labelIva;
+    private javax.swing.JLabel labelSubtotal;
+    private javax.swing.JLabel labeltotal;
     private javax.swing.JLabel lblIva;
     private javax.swing.JLabel lblSubtotal;
     private javax.swing.JLabel lblTotal;
+    private javax.swing.JLabel lbltitle;
     private javax.swing.JSpinner spnCantidad;
     private javax.swing.JTable tblProductos;
     // End of variables declaration//GEN-END:variables
