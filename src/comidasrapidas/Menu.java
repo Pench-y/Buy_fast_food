@@ -1,16 +1,21 @@
 
 package comidasrapidas;
 //Bookstores
-import java.util.Scanner;
+import java.awt.Image;
+import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 public class Menu extends javax.swing.JFrame {
 
     public Menu() {
         initComponents();
         //Name windows
-        this.setTitle("Comidas rapidas");
+        this.setTitle("Menú");
         //Accommodate windows
         this.setLocationRelativeTo(null);
+        
+        /*Image informacion = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/img/info"));
+        btninfo.setIcon(new ImageIcon(informacion.getScaledInstance(btninfo.getWidth(),btninfo.getHeight(), Image.SCALE_SMOOTH)));*/
     }
 
     
@@ -41,6 +46,7 @@ public class Menu extends javax.swing.JFrame {
         Background = new javax.swing.JPanel();
         Tetx_menu = new javax.swing.JLabel();
         Text_title1 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
         img = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -159,6 +165,14 @@ public class Menu extends javax.swing.JFrame {
         Text_title1.setText("Billings");
         Background.add(Text_title1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 20, -1, -1));
 
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/info.jpg"))); // NOI18N
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        Background.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, 50, 60));
+
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 500, 110));
 
         img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/banner.png"))); // NOI18N
@@ -181,6 +195,13 @@ public class Menu extends javax.swing.JFrame {
         if(i==0)
         System.exit(0);
     }//GEN-LAST:event_Exit1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // ---> informacion
+        Informacion newframe = new Informacion();
+        newframe.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -222,6 +243,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel Text_title1;
     private javax.swing.JLabel img;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;

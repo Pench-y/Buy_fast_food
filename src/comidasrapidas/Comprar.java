@@ -19,7 +19,7 @@ public class Comprar extends javax.swing.JFrame {
     public Comprar() {
         initComponents();
         //Name windows
-        this.setTitle("Comidas rapidas");
+        this.setTitle("Pedido");
         //Accommodate windows
         this.setLocationRelativeTo(null);
         DefaultComboBoxModel comboModel=new DefaultComboBoxModel(products);
@@ -65,7 +65,7 @@ public class Comprar extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btretorno.setBackground(new java.awt.Color(255, 255, 51));
-        btretorno.setText("Retornar");
+        btretorno.setText("Volver");
         btretorno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btretornoActionPerformed(evt);

@@ -16,7 +16,7 @@ public class Factura extends javax.swing.JFrame {
      */
     public Factura() {
         initComponents();
-        this.setTitle("Comidas rapidas");
+        this.setTitle("Factura");
         this.setLocationRelativeTo(null);
     }
 
